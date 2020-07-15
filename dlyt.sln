@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dlyt", "dlyt\dlyt.csproj", "{B80199E8-49C2-493E-B052-0EA4634E7A9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeDownload", "YoutubeDownload\YoutubeDownload.csproj", "{B2D2A618-1006-45AC-80D9-0C0EF82A58AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keyboardx", "Keyboardx\Keyboardx.csproj", "{F1413E7A-D268-45D9-8F50-27712F1AA302}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B80199E8-49C2-493E-B052-0EA4634E7A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B80199E8-49C2-493E-B052-0EA4634E7A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B80199E8-49C2-493E-B052-0EA4634E7A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B80199E8-49C2-493E-B052-0EA4634E7A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2D2A618-1006-45AC-80D9-0C0EF82A58AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2D2A618-1006-45AC-80D9-0C0EF82A58AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2D2A618-1006-45AC-80D9-0C0EF82A58AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2D2A618-1006-45AC-80D9-0C0EF82A58AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1413E7A-D268-45D9-8F50-27712F1AA302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1413E7A-D268-45D9-8F50-27712F1AA302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1413E7A-D268-45D9-8F50-27712F1AA302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1413E7A-D268-45D9-8F50-27712F1AA302}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49B1F05A-0923-409A-AEEA-5B9CEEEE0C57}
+	EndGlobalSection
+EndGlobal
