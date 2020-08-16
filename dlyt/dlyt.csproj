@@ -3,11 +3,12 @@
   <ItemGroup>
     <ProjectReference Include="..\YoutubeDownload\YoutubeDownload.csproj" />
     <ProjectReference Include="..\Keyboardx\Keyboardx.csproj" />
+    <ProjectReference Include="..\HandleKeyboard\HandleKeyboard.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
 </Project>

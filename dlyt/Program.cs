@@ -3,14 +3,11 @@ using System.Threading.Tasks;
 using System.IO;
 
 using YoutubeDownload;
-using Keyboardx;
 
 /*
- TODO 
-
- Fungsi untuk sinkronkan semua file yg di E:/Youtube
+ TODO: 
+    Fungsi untuk sinkronkan semua file yg di E:/Youtube
     Hapus semua spesial karakter
-
  */
 namespace dlyt
 {
@@ -21,58 +18,42 @@ namespace dlyt
         static async Task Main(string[] args)
         {
             //Console.Clear();
+            Console.ResetColor();
             Program main = new Program();
-            cekDuplikasi cek = new cekDuplikasi();
-            Tanya tanya = new Tanya();
-
-            string currentDir = Environment.CurrentDirectory;
-
-            cek.validasiLink(tanya.PasteX()); // cek apakalah link valid atau tidak
-
-            main.link = tanya.PasteX();
-
-
-            var info = new Info(main.link);
-            var getInfo = await info.getInfo();
-
-            string namaFile = $"{info.convertFilename(getInfo.Title)}.mp4";
-            getInfo.namaFile = namaFile;
-
-            //Console.WriteLine($"{namaFile}");
-
-            //Console.WriteLine("sate ",cek.fileSudahAda(namaFile).keterangan.ToString());
-
-            Console.WriteLine(namaFile.ToString());
-
-            var x = cek.fileSudahAda(getInfo.namaFile);
-            Console.WriteLine(x.status.ToString(), x.keterangan);
-            if (x.status)
-            {
-                Console.WriteLine($"File Sudah ada {cek.fileSudahAda(namaFile).keterangan }");
-                return;
+            
+            // Cek Keyboard 
+            var clipboard = new HandleKeyboard.Link();
+            string paste = await clipboard.Paste();
+            if (!clipboard.isLink(paste)) {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Link Salah");
+                Console.ResetColor();
+                Console.ReadKey();
+                Environment.Exit(0);
             }
+            var getInfo = clipboard.getInfo(paste);         
+            if (getInfo.hostname != "www.youtube.com"){ return; }
 
+            // get info video - youtube
+            Info info = new Info(paste);
+            attributeVideo youtubeInfo = await info.getInfo();
 
+            // Tampilkan Info Video
+            main.showInfo(youtubeInfo);
+            await info.getTanyaSize();
 
-            //if (!cek.fileSudahAda(namaFile))
-            //{
-            //    Console.WriteLine("File Sudah ada ",namaFile);
-            //}
+            // var TanyaSize = await info.getTanyaSize();
+            //return;
+            // await info.downloadBaru(TanyaSize, youtubeInfo);
 
-            main.showInfo(getInfo);
-            // Console.Title = getInfo.Title;
-            //Console.WriteLine(Path.Combine("E:/", info.convertFilename(getInfo.Title)));
-
-            //await info.downloadVideo(getInfo);
-
-
-            Console.ReadKey();
-            return;
         }
+
         public void garis(string kata)
         {
-            for (Int16 i = 0; i < (kata.Length); i++) {
-                Console.Write("=");
+            for (Int16 i = 0; i < (kata.Length + 14); i++) {
+                
+                if (i >= 53) break;
+                Console.Write("-");
             };
             Console.WriteLine();
         }
@@ -81,15 +62,15 @@ namespace dlyt
             
             garis(video.Title);
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($" Judul   : {video.Title}");
+            Console.WriteLine($"| Judul   : {video.Title} |");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($" Chanel  : {video.Chanel} \n");
+            Console.WriteLine($"| Chanel  : {video.Chanel} \n");
             Console.ResetColor();
 
-            Console.WriteLine($" Durasi  : {video.Duration} Menit");
-            Console.WriteLine($" Like    : {video.Like} - Dislike : {video.Dislike}");
-            Console.WriteLine($" View    : {video.View}");
-            Console.WriteLine($" Upload  : {video.DateUpload}");
+            Console.WriteLine($"| Durasi  : {video.Duration} Menit");
+            Console.WriteLine($"| Like    : {video.Like} - Dislike : {video.Dislike}");
+            Console.WriteLine($"| View    : {video.View}");
+            Console.WriteLine($"| Upload  : {video.DateUpload}");
             garis(video.Title);
 
 
