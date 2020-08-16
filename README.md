@@ -13,18 +13,18 @@ Semua paket ini bisa dicari di nuget
 * Done 
 
 ## Flowchart
-- [*] Paste text dari clipboard (otomatis)
-- [*] Cek apakah text tsb berupa link atau tidak
-- [*] Apakah link berasal dari youtube
-- [] Link berupa Playlist atau Single Video 
-- [] Jika link : Playlist
-  1. Each
-- [] Jika link : Single Video
+[*] Paste text dari clipboard (otomatis)
+[*] Cek apakah text tsb berupa link atau tidak
+[*] Apakah link berasal dari youtube
+[] Link berupa Playlist atau Single Video 
+[] Jika link : Playlist
+ 1. Each
+[] Jika link : Single Video
  1. Tampilkan informasi Video (Judul, Chanel, Dis-like, Durasi)
  2. Tampilkan opsi kualitas dan size video yang tersedia (berapa MB)
  3. User memilih kualitas
  4. Proses Download
-- [] Done
+[] Done
 
 
 
