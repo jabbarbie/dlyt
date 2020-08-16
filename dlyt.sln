@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dlyt", "dlyt\dlyt.csproj", "{B80199E8-49C2-493E-B052-0EA4634E7A9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dlyt", "dlyt\dlyt.csproj", "{B80199E8-49C2-493E-B052-0EA4634E7A9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeDownload", "YoutubeDownload\YoutubeDownload.csproj", "{B2D2A618-1006-45AC-80D9-0C0EF82A58AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeDownload", "YoutubeDownload\YoutubeDownload.csproj", "{B2D2A618-1006-45AC-80D9-0C0EF82A58AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keyboardx", "Keyboardx\Keyboardx.csproj", "{F1413E7A-D268-45D9-8F50-27712F1AA302}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keyboardx", "Keyboardx\Keyboardx.csproj", "{F1413E7A-D268-45D9-8F50-27712F1AA302}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandleKeyboard", "HandleKeyboard\HandleKeyboard.csproj", "{7271A395-48C3-42FB-95D1-DEC486D023B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HandleKeyboard", "HandleKeyboard\HandleKeyboard.csproj", "{7271A395-48C3-42FB-95D1-DEC486D023B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{120583FA-251A-4DCF-8CC2-154000F557BB}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
