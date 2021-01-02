@@ -6,6 +6,10 @@ Semua paket ini bisa dicari di nuget
 - YoutubeExplode 
 - TextCopy (untuk handle copy paste di clipboard)
 
+## Quick Start
+  - Copy link youtube
+  - dotnet run -p dlyt
+
 ## Usage
 * Copy URL yang akan didownload (ex : https://www.youtube.com/watch?v=KmHBUseN_yY)
 * Buka aplikasinya
